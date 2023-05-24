@@ -8,13 +8,12 @@ const Token = () => {
     console.log(jwt);
 
     return (
-      <>
+      <div style={{padding: "20px"}}>
         
-        
-          <JsonView data={jwt_decode(UserService.getAccessToken())} shouldInitiallyExpand={(level) => true} style={defaultStyles} />
+          <JsonView data={jwt_decode(UserService.getAccessToken())} shouldInitiallyExpand={(level) => true} style={darkStyles} />
           
         
-      </>
+      </div>
     );
 }
 
