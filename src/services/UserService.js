@@ -28,9 +28,11 @@ const doLogout = _kc.logout;
 
 const getToken = () => _kc.token;
 const getIdToken = () => _kc.idToken;
-const getLoadUserInfo = () => _kc.loadUserInfo;
+const getLoadUserInfo = () => _kc.loadUserInfo();
+const getloadUserProfile = () => _kc.loadUserProfile();
 const getAccessToken = () => _kc.token;
 const getuserInfo = () => _kc.userInfo;
+const getcreateAccountUrl = () => _kc.createAccountUrl;
 
 const isLoggedIn = () => !!_kc.token;
 
@@ -57,7 +59,9 @@ const UserService = {
   getFirstname,
   hasRole,
   getLoadUserInfo,
+  getloadUserProfile,
   getuserInfo,
+  getcreateAccountUrl,
 };
 
 console.log(_kc)
