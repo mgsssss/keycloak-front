@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import UserService from "../services/UserService";
 
 const Home = (props) => {
-    
+
     const [userJson, SetuserJson] = useState([]);
     const token = UserService.getIdToken();
 
@@ -18,7 +18,9 @@ const Home = (props) => {
             json_data = JSON.parse(data);
 
             Object.keys(json_data).forEach(function (key) {
-                tifOptions.push([key, json_data[key]]);
+                if (json_data[key] !== "") {
+                    tifOptions.push([key, json_data[key]]);
+                }
             });
 
             SetuserJson(tifOptions);
