@@ -11,7 +11,7 @@ import UserService from "./services/UserService";
 // import SecretBooks from "./component/SecretBooks";
 import NoMatch from "./component/NoMatch";
 import jwt_decode from "jwt-decode";
-import { setting } from './setting.json';
+import { setting } from './setting';
 
 // import { Button, Nav } from "react-bootstrap"; // 꼭 import를 해와야한다
 
@@ -32,8 +32,7 @@ const App= ()=> {
   return (
     <BrowserRouter>
       <div className="container">
-        
-        {isLogin && <Header />}
+        {isLogin && <Header config={setting}/>}
         <Routes>
           {!isLogin && <Route path="/" element={<Welcome />}/>}
           {isLogin && <Route path="/" element={<Home userRole = {getRole} />}/>}
