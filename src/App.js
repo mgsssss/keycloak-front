@@ -31,7 +31,7 @@ const App= ()=> {
   
   return (
     <BrowserRouter>
-      <div className="container">
+      <div className="container" style={{backgroundColor: setting.backgroundColor}}>
         {isLogin && <Header config={setting}/>}
         <Routes>
           {!isLogin && <Route path="/" element={<Welcome />}/>}

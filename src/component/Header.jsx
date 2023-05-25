@@ -13,7 +13,7 @@ const Header = (props) => {
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <div className="container-fluid">
         
-        <NavLink to ="/" className="navbar-brand">충북교육청</NavLink>
+        <NavLink to ="/" className="navbar-brand">{props.config.header_text}</NavLink>
 
         <div className="navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav me-auto">
