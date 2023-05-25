@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 import UserService from "../services/UserService";
 
-const logout = (aaa) => {
+const logout = (url) => {
     const options = {
-        redirectUri : 'http://localhost:3001/'
+        redirectUri : url
     }
     UserService.doLogout(options)
 }
