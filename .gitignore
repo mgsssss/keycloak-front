@@ -25,3 +25,4 @@ public/keycloak.json
 src/setting.js
 
 public/index.html
+../public/index.html
