@@ -23,3 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 public/keycloak.json
 src/setting.js
+
+public/index.html
